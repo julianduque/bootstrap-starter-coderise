@@ -1,8 +1,8 @@
 (function() {
 
   StackMob.init({
-    appName: "<APP NAME>",
-    clientSubdomain: "<YOUR CLIENT NAME>",
+    appName: "coderise",
+    clientSubdomain: "<YOUR EMAIL>",
     publicKey: "<YOUR PUBLIC KEY>",
     apiVersion: 0
   });
