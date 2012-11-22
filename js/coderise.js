@@ -2,7 +2,7 @@
 
   StackMob.init({
     appName: "coderise",
-    clientSubdomain: "<YOUR EMAIL>",
+    clientSubdomain: "<YOUR SUBDOMAIN>",
     publicKey: "<YOUR PUBLIC KEY>",
     apiVersion: 0
   });
@@ -15,6 +15,17 @@
     entry.create();
 
     console.log("Created a coderiser in StackMob server");
+
+    coderisers = new Coderiser();
+
+    coderisers.fetch({
+      success: function(model) {
+        console.log(model.toJSON());
+      },
+      error: function(mode, response) {
+        console.log(response);
+      }
+    });
 
   });
 
