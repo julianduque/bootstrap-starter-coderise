@@ -1,13 +1,13 @@
 (function() {
 
   StackMob.init({
-    appName: "APPNAME",
-    clientSubdomain: "",
-    publicKey: "",
+    appName: "coderise",
+    clientSubdomain: "julianduquejgmailcom",
+    publicKey: "7d7c4b26-56dd-429b-a6ce-d722fb1bedc3",
     apiVersion: 0
   });
   
-  var Coderiser = StackMob.Model.extend({ schemaName: 'coderisers' });
+  var Coderiser = StackMob.Model.extend({ schemaName: 'coderisers' }); 
 
   $('#create-coderiser').click(function(e) {
     e.preventDefault();
@@ -73,6 +73,31 @@
         }
     });
 
+  });
+  
+  
+  $('#get-songs').click(function(e) {
+      e.preventDefault();
+      var Song = StackMob.Model.extend({ schemaName: 'songs' });
+  
+      var q = new StackMob.Collection.Query();
+      q.equals('genre', 'rock');
+      
+      var find = new Song();
+      find.query(q, {
+          success: function(model) {
+              var songs = model.toJSON();
+              var container = $('#songs');
+              container.empty();
+              $.each(songs, function(ix, song) {
+                  console.log(song);
+                  container.append('<p>' + song.song + ' - ' + song.genre + '</p>');
+              });
+          },
+          error: function(model, response) {
+              console.log(response);
+          }
+      });
   });
 
 })();
