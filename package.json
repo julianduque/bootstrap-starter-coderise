@@ -1,0 +1,29 @@
+{
+  "name": "bootstrap-starter-coderise",
+  "version": "0.0.0",
+  "description": "A base project for Coderise",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/julianduque/bootstrap-starter-coderise"
+  },
+  "keywords": [
+    "javascript",
+    "html",
+    "css",
+    "bootstrap",
+    "learning"
+  ],
+  "author": "Julian Duque <julianduquej@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julianduque/bootstrap-starter-coderise/issues"
+  },
+  "homepage": "https://github.com/julianduque/bootstrap-starter-coderise",
+  "dependencies": {
+    "node-static": "^0.7.3"
+  }
+}
