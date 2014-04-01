@@ -1,5 +1,7 @@
 # Coderise Starter
 
+![Coderise](https://camo.githubusercontent.com/77ffa9a568de736030c30bdfdc2ae69b30701f67/687474703a2f2f63697472692e636f2f636f6465726973652f6c6f676f2e706e67)
+
 Base project with support of:
 
 * jQuery
