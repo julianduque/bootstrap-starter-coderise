@@ -4,10 +4,10 @@
 
 Base project with support of:
 
-* jQuery
-* Bootstrap 3
-* Firebase
-* Node.js
+* [jQuery](http://jquery.com)
+* [Bootstrap 3](http://getbootstrap.com) (Including [Bootswatch](http://bootswatch.com) themes)
+* [Firebase](http://firebase.io)
+* [Node.js](http://nodejs.org)
 
 ## Install Dependencies
 
