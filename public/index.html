@@ -40,7 +40,7 @@
         <div class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" role="form">
             <div class="form-group">
-              <input id="email" type="text" placeholder="Email" class="form-control">
+              <input id="username" type="text" placeholder="Username" class="form-control">
             </div>
             <div class="form-group">
               <input id="password" type="password" placeholder="Password" class="form-control">
@@ -62,6 +62,21 @@
 
     <div class="container">
       <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <form role="form">
+            <div class="form-group">
+              <input type="text" placeholder="Name" id="name" />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email" id="email" />
+            </div>
+            <button id="addContact" class="btn btn-primary">Add</button>
+          </form>
+        </div>
+        <div  id="contacts" class="col-md-8">
+        </div>
+      </div>
       <div class="row">
         <div class="col-md-4">
           <h2>Heading</h2>
@@ -86,8 +101,24 @@
         <p>&copy; Coderise 2014</p>
       </footer>
     </div> <!-- /container -->        
+        <script id="contact-template" type="x-tmpl-mustache">
+          <div class="row well">
+            <div class="col-md-2">
+              <img src="http://placehold.it/72x72" class="img-circle">
+            </div>
+            <div class="col-md-10">
+              <h4>{{name}}</h4>
+              <i class="glyphicon glyphicon-envelope"></i>
+              <span>{{email}}</span>
+            </div>
+          </div>
+        </script>
+
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/lib/jquery-1.11.0.js"><\/script>')</script>
+        <script src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
+        <script src="js/lib/mustache.js"></script>
         <script src="js/lib/bootstrap.js"></script>
         <script src="js/main.js"></script>
     </body>
